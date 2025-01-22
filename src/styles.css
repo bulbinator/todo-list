@@ -57,3 +57,15 @@ header
     flex: 9.7;
     border: solid black 1px;
 }
+
+.project-header
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-project-button-container
+{
+    display: flex;
+    justify-content: center;
+}
