@@ -1,4 +1,59 @@
-body
+html, body
 {
-    background-color: rebeccapurple;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+header
+{
+    display: flex;
+    justify-content: center;
+    border: solid black 1px;
+}
+
+.content
+{
+    height: 100%;
+    display: flex;
+    border: solid black 1px;
+}
+
+.projects
+{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    height: 100%;
+    border: solid black 1px;
+}
+
+.project-detail
+{
+    display: flex;
+    flex-direction: column;
+    flex: 8;
+    height: 100%;
+    border: solid black 1px;
+}
+
+.title
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: .3;
+    border: solid black 1px;
+}
+
+.projects-content
+{
+    flex: 9.7;
+    border: solid black 1px;
+}
+
+.project-detail-content
+{
+    flex: 9.7;
+    border: solid black 1px;
 }

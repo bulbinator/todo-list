@@ -1,6 +1,6 @@
 import "./styles.css";
-import { Todo } from "./todo";
-import { Project } from "./project";
+import { Todo } from "./classes/todo";
+import { Project } from "./classes/project";
 
 const todo1 = new Todo('testTodo1', 'testdate')
 todo1.setDescription('testing')
