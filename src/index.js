@@ -1,7 +1,7 @@
 import "./styles.css";
 import { Todo } from "./classes/todo";
 import { Project } from "./classes/project";
-import { deleteProject, displayProjects } from "./DOM/dom"
+import { deleteProject, displayProjects, displayProject} from "./DOM/dom"
 
 const todo1 = new Todo('testTodo1', 'testdate')
 todo1.setDescription('testing')
@@ -26,6 +26,7 @@ projectList.push(project)
 projectList.push(project)
 
 displayProjects()
+displayProject()
 deleteProject()
 
 console.log('')

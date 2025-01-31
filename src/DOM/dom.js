@@ -42,6 +42,51 @@ export function displayProjects() {
     });
 }
 
+export function displayProject(){
+    const projectContent = document.querySelector('.projects-content')
+
+    const projectTitle = document.querySelector('.project-detail > .title')
+    const projectDetailContent = document.querySelector('.project-detail-content')
+
+    projectContent.addEventListener("click", function(e){
+        if(e.target.className === "project"){
+            projectTitle.textContent = ""
+            projectDetailContent.textContent = ""
+
+            const index = e.target.dataset.index
+            const project = projectList[index]
+            const todoList = project.getTodoList()
+            projectTitle.textContent = project.getTitle()
+
+            todoList.forEach(todo => {
+                const todoContainer = document.createElement('div')
+                todoContainer.classList.add('todo')
+                projectDetailContent.appendChild(todoContainer)
+
+                const todoHeader = document.createElement('div')
+                todoHeader.classList.add('todo-header')
+                todoContainer.appendChild(todoHeader)
+
+                const todoTitle = document.createElement('p')
+                todoTitle.textContent = todo.getTitle()
+                const todoDueDate = document.createElement('p')
+                todoDueDate.textContent = todo.getDueDate()
+                todoHeader.appendChild(todoTitle)
+                todoHeader.appendChild(todoDueDate)
+
+
+                const todoContent = document.createElement('div')
+                todoContent.classList.add('todo-content')
+                todoContainer.appendChild(todoContent)
+
+                const todoDescription = document.createElement('li')
+                todoDescription.textContent = todo.getDescription()
+                todoContent.appendChild(todoDescription)
+            });
+        }
+    })
+}
+
 
 export function deleteProject() {
     const projectsContent = document.querySelector('.projects-content')

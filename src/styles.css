@@ -58,7 +58,7 @@ header
     border: solid black 1px;
 }
 
-.project-header
+.project-header, .todo-header
 {
     display: flex;
     justify-content: space-between;
@@ -68,4 +68,9 @@ header
 {
     display: flex;
     justify-content: center;
+}
+
+.todo-content
+{
+    display: flex;
 }
